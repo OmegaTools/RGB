@@ -4,7 +4,7 @@
 
 <table>
   <tr>
-    <td><b>#</b><span>RR</span><span>GG</span><span>BB</span><span>AA</span></td>
+    <td><b>#</b><span style='color:green'>RR</span><span>GG</span><span>BB</span><span>AA</span></td>
     <td><span>RR</span><span>GG</span><span>BB</span><span>AA</span></td>
   </tr>
   <tr>
