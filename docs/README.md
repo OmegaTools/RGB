@@ -3,7 +3,7 @@ Converts to RGB.
 
 ### How to
 * [Install](./wiki/Install.md)
-* [Use](./docs/wiki/Use.md)
+* [Use](./wiki/Use.md)
 
 
 ### Info
