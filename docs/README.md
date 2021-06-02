@@ -7,7 +7,7 @@ Converts to RGB.
 
 
 ### Info
-* [Supported Conversions](./docs/wiki/Supported.md)
+* [Supported Conversions](./wiki/Supported.md)
 
 
 # License
