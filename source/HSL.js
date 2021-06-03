@@ -17,7 +17,7 @@ const
 
 module.exports = (...colors) => {
 
-  if(colors.length === 1 || typeof colors[1] !== 'Number')
+  if(colors.length === 1 || typeof colors[2] !== 'number')
     colors = colors[0];
 
   const [ Hue , Saturation , Lightness , Alpha ] = colors;
