@@ -21,3 +21,27 @@
   </tr>
 </table>
 
+***
+
+## HSL
+
+- Hue: `0 - 360`
+- Saturation: `0 - 1`
+- Lightness: `0 - 1`
+
+<table style='text-align:center'>
+  <tr>
+    <td></td>
+    <td>Alpha</td>
+  </tr>
+  <tr>
+    <td>Array</td>
+    <td>[ H , S , L , A ]</td>
+    <td>[ H , S , L ]</td>
+  </tr>
+  <tr>
+    <td>Values</td>
+    <td> H , S , L , A </td>
+    <td> H , S , L </td>
+  </tr>
+</table>

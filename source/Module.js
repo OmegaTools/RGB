@@ -4,3 +4,4 @@
 
 
 exports.hexToRGB = require('./Hex.js');
+exports.hslToRGB = require('./HSL.js');
