@@ -31,7 +31,7 @@
 <br>
 
 ```JavaScript
-import * as HSL from 'https://deno.land/x/rgb/mod.ts';
+import * as RGB from 'https://deno.land/x/rgb/mod.ts';
 ```
 
 </div>
@@ -43,7 +43,7 @@ import * as HSL from 'https://deno.land/x/rgb/mod.ts';
 ```JavaScript
 const hex = '#0000FF'; // Blue
 
-const rgb = HSL.fromHex(hex);
+const rgb = RGB.fromHex(hex);
 
 console.log(rgb); // [ 0 , 0 , 255 ]
 ```
@@ -55,7 +55,7 @@ console.log(rgb); // [ 0 , 0 , 255 ]
 ```JavaScript
 const hsl = [ 0 , 100 , 50 ]; // Red
 
-const rgb = HSL.fromHSL(hsl);
+const rgb = RGB.fromHSL(hsl);
 
 console.log(rgb); // [ 255 , 0 , 0 ]
 ```
@@ -70,9 +70,9 @@ console.log(rgb); // [ 255 , 0 , 0 ]
 ```JavaScript
 const cmyk = [ 100 , 0 , 100 , 0 ]; // Green
 
-const hsl = HSL.fromCMYK(cmyk);
+const rgb = RGB.fromCMYK(cmyk);
 
-console.log(hsl); // [ 120 , 100 , 50 ]
+console.log(rgb); // [ 120 , 100 , 50 ]
 ``` -->
 
 <br>
