@@ -38,28 +38,31 @@ import * as HSL from 'https://deno.land/x/rgb/mod.ts';
 
 <br>
 
-<!-- ### RGB
-
-```JavaScript
-const rgb = [ 255 , 0 , 0 ]; // Red
-
-const hsl = HSL.fromRGB(rgb);
-
-console.log(hsl); // [ 0 , 100 , 50 ]
-```
-
-<br>
-
 ### Hex
 
 ```JavaScript
 const hex = '#0000FF'; // Blue
 
-const hsl = HSL.fromHex(hex);
+const rgb = HSL.fromHex(hex);
 
-console.log(hsl); // [ 240 , 100 , 50 ]
+console.log(rgb); // [ 0 , 0 , 255 ]
 ```
 
+<br>
+
+### HSL
+
+```JavaScript
+const hsl = [ 0 , 100 , 50 ]; // Red
+
+const rgb = HSL.fromHSL(hsl);
+
+console.log(rgb); // [ 255 , 0 , 0 ]
+```
+
+
+
+<!-- 
 <br>
 
 ### CMYK
