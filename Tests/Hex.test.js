@@ -28,4 +28,11 @@ Deno.test('Hex String Conversion',() => {
     
     assertHexIsRGB('#0000FF',[ 0 , 0 , 255 ]);
 
+
+    //  Invalid
+    
+    assertHexIsRGB('',null);
+    assertHexIsRGB('#XXXXXX',null);
+    assertHexIsRGB('#000000XX',null);
+
 })

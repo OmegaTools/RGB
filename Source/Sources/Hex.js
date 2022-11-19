@@ -1,41 +1,54 @@
 
 
 const { errors } = Deno;
-const { log } = console;
 
 const 
-    channels_single = /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})?$/i ,
-    channels_double = /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$/i ;
+    channels_single = /^#?([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})?$/i ,
+    channels_double = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$/i ;
 
-const invalid_hex_string = 
-    'Invalid hex color string format, must be (#)RRGGBB(AA) or (#)RGB(A)';
 
-const parseHex = (string) =>
+const toNumber = ( string ) =>
     parseInt(string,16);
+
+const isPresent = ( value ) =>
+    value;
 
 
 /*
- *  (#)RRGGBB(AA) or (#)RGB(A) -> [ R , G , B , (A) ]
+ *  Input : (#)RRGGBB(AA) or (#)RGB(A)
+ *  Output : [ R , G , B , (A) ] or null
  */
 
-export default function fromHex(hex){
+export default function fromHex ( string ){
     
-    if(hex.startsWith('#'))
-        hex = hex.substring(1);
+    const matches = findHex(string);
     
-    const { length } = hex;
-    
-    const matches = 
-        hex.match(channels_double) ??
-        hex.match(channels_single) ;
-        
-    if(!matches)
-        throw new InvalidData(invalid_hex_string);
+    return ( matches )
+        ? parse(matches)
+        : null ;
+}
 
+
+/*
+ *  Attempt to find a hex color string.
+ */
+
+function findHex ( string ){
+    return string.match(channels_double)
+        ?? string.match(channels_single) ;
+}
+
+
+/*
+ *  Parse matched hex color channels.
+ */
+
+function parse ( matches ){
+    
     const channels = matches
         .slice(1)
-        .filter((value) => value)
-        .map(parseHex);
+        .filter(isPresent)
+        .map(toNumber);
 
     return channels;
 }
