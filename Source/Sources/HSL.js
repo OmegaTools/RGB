@@ -1,11 +1,12 @@
 
 const { min , max , round } = Math;
 
-
 const offsets = [ 0 , 8 , 4 ];
 
 
 function toRGB([ Hue , Saturation , Lightness ]){
+    
+    //  [ 0 - 100 ] -> [ 0 - 1 ]
     
     Saturation *= 0.01;
     Lightness *= 0.01;
@@ -16,7 +17,11 @@ function toRGB([ Hue , Saturation , Lightness ]){
 
     const a = Saturation * min(Lightness,1 - Lightness);
 
-    return offsets.map((offset) => {
+    return offsets
+        .map(toChannel);
+    
+    
+    function toChannel ( offset ){
 
         offset += Hue;
 
@@ -47,7 +52,7 @@ function toRGB([ Hue , Saturation , Lightness ]){
         //  To Int
 
         return round(offset);
-    });
+    }
 }
 
 
@@ -56,13 +61,6 @@ function toRGB([ Hue , Saturation , Lightness ]){
  */
 
 export default function fromHSL ( colors ){
-    
-    const rgb = toRGB(colors);
-
-    const alpha = colors[3];
-
-    if(alpha)
-        rgb.push(alpha);
-
-    return rgb;
+    return toRGB(colors)
+        .concat(colors.splice(3,1));
 }

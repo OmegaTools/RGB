@@ -2,6 +2,13 @@
 import { assertHexIsRGB } from 'AssertColor'
 
 
+Deno.test('Hex string conversion retains alpha',() => {
+    
+    assertHexIsRGB('#00000040',[ 0 , 0 , 0 , 64 ]);
+    
+})
+
+
 Deno.test('Hex String Conversion',() => {
     
     //  Black
@@ -33,6 +40,6 @@ Deno.test('Hex String Conversion',() => {
     
     assertHexIsRGB('',null);
     assertHexIsRGB('#XXXXXX',null);
-    assertHexIsRGB('#000000XX',null);
+    assertHexIsRGB('#00000000XX',null);
 
 })

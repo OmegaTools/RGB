@@ -2,7 +2,14 @@
 import { assertHSLIsRGB } from 'AssertColor'
 
 
-Deno.test('HSL Array Conversion',() => {
+Deno.test('HSL array conversion retains alpha',() => {
+
+    assertHSLIsRGB([ 0 , 0 , 0 , 64 ],[ 0 , 0 , 0 , 64 ]);
+    
+})
+
+
+Deno.test('HSL array conversion works',() => {
     
     //  Black
     
