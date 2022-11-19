@@ -22,7 +22,7 @@
 
 <br>
 
-```JavaScript
+```js
 import * as RGB from 'https://deno.land/x/rgb/mod.ts';
 ```
 
@@ -32,7 +32,7 @@ import * as RGB from 'https://deno.land/x/rgb/mod.ts';
 
 ### Hex
 
-```JavaScript
+```js
 const hex = '#0000FF'; // Blue
 
 const rgb = RGB.fromHex(hex);
@@ -44,7 +44,7 @@ console.log(rgb); // [ 0 , 0 , 255 ]
 
 ### HSL
 
-```JavaScript
+```js
 const hsl = [ 0 , 100 , 50 ]; // Red
 
 const rgb = RGB.fromHSL(hsl);
