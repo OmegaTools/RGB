@@ -1,10 +1,8 @@
 
 import { assertHexIsRGB } from 'AssertColor'
 
-const { test } = Deno;
 
-
-test('Hex String Conversion',() => {
+Deno.test('Hex String Conversion',() => {
     
     //  Black
     
