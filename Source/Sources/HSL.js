@@ -55,11 +55,8 @@ function toRGB([ Hue , Saturation , Lightness ]){
  *  [ H , S , L , (A) ] -> [ R , G , B , (A) ]
  */
 
-export default function fromHSL(colors){
-
-    if(colors.length === 1 || (typeof colors[2] !== 'number'))
-        colors = colors[0];
-
+export default function fromHSL ( colors ){
+    
     const rgb = toRGB(colors);
 
     const alpha = colors[3];

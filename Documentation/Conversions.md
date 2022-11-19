@@ -41,6 +41,5 @@ Hue ranges from  `0 - 360` , all others range from  `0 - 255`
 |   | HSL | HSLA |
 |:-:|:---:|:----:|
 | **Array**     | ( [ H , S , L ] ) | ( [ H , S , L , A ] )
-| **Parameter** | ( H , S , L ) | ( H , S , L , A )
 
 <br>

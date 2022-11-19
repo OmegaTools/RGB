@@ -24,12 +24,12 @@ export function fromHex (
  *  
  *  Alpha channel can be included and won't be altered.
  *
- *  @param color Either ( H , S , L , (A) ) or ([ H , S , L , (A) ])
+ *  @param color ([ H , S , L , (A) ])
  *  @return A HSL(A) color array 
  */
 
 export function fromHSL ( 
-    ... color : number [] | number[][] 
+    color : number []
 ) : number [] {
     return HSL( color ) as number [];
 }

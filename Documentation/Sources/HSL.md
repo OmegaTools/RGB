@@ -9,16 +9,6 @@ import { fromHSL } from 'RGB'
 
 <br>
 
-## Parameter
-
-*Supply the channels directly.*
-
-```JavaScript
-const rgb = fromHSL( H , S , L );
-```
-
-<br>
-
 ## Array
 
 *Pass the channels as an array.*
@@ -35,10 +25,6 @@ const rgb = fromHSL([ H , S , L ]);
 
 ```JavaScript
 const rgba = fromHSL([ H , S , L , A ]);
-```
-
-```JavaScript
-const rgba = fromHSL( H , S , L , A );
 ```
 
 <br>

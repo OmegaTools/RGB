@@ -1,10 +1,5 @@
 
-
-const { errors } = Deno;
-
-const 
-    channels_single = /^#?([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})?$/i ,
-    channels_double = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})?$/i ;
+import { HexSingleChannel , HexDoubleChannel } from './Regex.js'
 
 
 const toNumber = ( string ) =>
@@ -34,8 +29,8 @@ export default function fromHex ( string ){
  */
 
 function findHex ( string ){
-    return string.match(channels_double)
-        ?? string.match(channels_single) ;
+    return string.match(HexDoubleChannel)
+        ?? string.match(HexSingleChannel) ;
 }
 
 
